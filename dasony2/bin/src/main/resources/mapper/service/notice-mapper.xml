@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="notice">
+
+	<resultMap id="noticeResultSet" type="Notice">
+		<id column="notice_no" property="no" />
+		<result column="notice_category" property="category"/>
+		<result column="notice_title" property="title"/>
+		<result column="notice_content" property="content"/>
+		<result column="notice_write_date" property="writeDate"/>
+		<result column="notice_modify_date" property="modifyDate"/>
+	</resultMap>
+	
+	<insert id="addNotice" parameterType="Notice">
+		insert into notice(notice_no, notice_category, notice_title, notice_content, notice_write_date, notice_modify_date)
+		values(seq_nno.nextval, #{category}, #{title}, #{content}, sysdate, sysdate)
+	</insert>
+</mapper>

@@ -1,0 +1,55 @@
+.admin-user-datail-container{
+    width: 100%;
+}
+.admin-user-datail-head{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    font-size: 2vw;
+    font-weight: 900;
+}
+.admin-user-datail-head button, .admin-user-datail-head input{
+    font-size: 1.2vw;
+    height: 50%;
+}
+
+
+.admin-user-datail-table{
+    display: flex;
+}
+.admin-user-datail-table>table, .modalUserTable{
+    width: 70%;
+    margin: auto;
+}
+.admin-user-datail-table>table tr, .modalUserTable tr{
+    border-bottom: 1px solid #7A7A7A;
+    height: 5vh;
+}
+.admin-user-datail-table>table tr:first-child , .modalUserTable tr:first-child{
+    border-top: 1px solid #7A7A7A;
+}
+.admin-user-datail-table>table th, .modalUserTable th{
+    font-size: 1.3vw;
+    border-right: 2px solid #7A7A7A;
+    width: 25%;
+    text-align: end;
+    padding: 1.2%;
+}
+
+.admin-user-datail-table>table td, .modalUserTable td{
+    font-size: 1.3vw;
+    text-align: center;
+}
+.admin-user-datail-table>button{
+    display: inline-block;
+    height: 8vh;
+    width: 15%;
+    margin-top: 50%;
+}
+.modalUserTable tr{
+    height: 7vh;
+}
+.modalUserTable input, .modalUserTable select{
+    width: 70%;
+    height: 5vh;
+}

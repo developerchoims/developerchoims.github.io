@@ -1,0 +1,504 @@
+@font-face {
+  font-family: 'HakgyoansimWoojuR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+*{
+  list-style: none;
+}
+
+.user-datail-table{
+  padding: 0;
+  margin: 0;
+  width: 90vw;
+  height: 100vh;
+  box-sizing: border-box;
+  color: #7A7A7A;
+}
+
+.user-datail-table table{
+  padding-top: 10px;
+  text-align: center;
+  width: 55%;
+  font-size: 1.5vw;
+  font-family: 'HakgyoansimWoojuR';
+}
+.user-datail-table table tbody{
+  text-align: center;
+}
+
+.user-datail-table table tbody>tr>th:first-child{
+  width: 15%;
+}
+.user-datail-table table tbody>tr>td:first-child{
+  width: 60%;
+}
+.user-datail-table table tbody>tr>th:last-child{
+  width: 25%;
+}
+
+.user-datail-table tr{
+  height: 8vh;
+}
+
+.user-datail-table thead th{
+  text-align: left;
+  font-size: 2vw;
+  padding-top: 1.5vh;
+}
+
+.user-datail-table th{
+  text-align: right;
+  width: 20%;
+}
+
+.user-datail-table input{
+  width: 80%;
+  border: 2px solid #CB9DE7;
+  max-width: 450px;
+  border-radius: 0.5vw;
+}
+
+.user-datail-table button{
+  width: 70%;
+  height: 5.5vh;
+  border-radius: 0.5vw;
+  font-size: 1vw;
+  letter-spacing: 0.1vw;
+  border : 3px solid #CB9DE7; 
+  color:#CB9DE7; 
+  background-color:white; 
+  font-weight: 900;
+}
+
+.user-datail-table tfoot button{
+  width:50%;
+  height: 8vh;
+  font-size: 1.5vw;
+  border : 3px solid #CB9DE7; 
+  color:#CB9DE7; 
+  background-color:white; 
+  font-weight: 900;
+}
+
+.user-datail-table button:hover{
+  background-color:#CB9DE7;
+  color:#FCFA90;
+  transition-duration: 0.5s;
+}
+
+.user-datail-table table select{
+  width: 70%;
+  height: 5.5vh;
+  font-size: 1vw;
+  border : 3px solid #CB9DE7; 
+  color:#CB9DE7; 
+  background-color:white; 
+  font-weight: 900;
+  border-radius: 0.5vw;
+}
+
+
+#rabitimg{
+  border-radius: 8px;
+  width: 50%;
+  margin-left: 20%;
+}
+
+/* 알람css */
+.alert-table{
+  font-size: 22px;
+}
+.alert-table th, .alert-table td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: center;
+}
+
+/* .alert-table th {
+  background-color: #f2f2f2;
+}
+
+.alert-table tr:hover {
+  background-color: #f5f5f5;
+} */
+
+.product_info{
+  /* background-color: red; */
+  display: flex;
+  text-align: left;
+  height: 100%;
+  margin: 0;
+}
+.nf-td1{
+  padding-left: 1vw;
+}
+
+.nf-td2{
+  width: 15vw;
+  color: #CB9DE7;
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.nf-td3{
+  font-size: 0.9em;
+}
+
+
+.jefftable{
+  border-radius: 1vw;
+  width: 80%;
+  height: auto;
+}
+
+/* .jefftable tbody tr:hover{
+  background-color: #ebeaea;
+} */
+.jefftable td{
+  border-bottom: 1px solid #d0cfcf;
+  border-top: 1px solid #d0cfcf;;
+}
+.jefftable table{
+  text-align: center;
+}
+
+.jefftable tbody>tr{
+height: 12vh; 
+}
+
+.nf-history-header1{
+  width: 40vw ;
+ }
+
+ .nf-history-header2{
+  width: 11vw ;
+  border-top-left-radius: 1vw;
+}
+.nf-history-header3{
+  width: 15vw ;
+  border-top-right-radius: 1vw;
+}
+.nf-history-header4{
+  width: 15vw ;
+}
+
+.nf-history-header1,
+.nf-history-header2,
+.nf-history-header3,
+.nf-history-header4{
+  background-color: rgb(230, 230, 230);
+
+ }
+
+.mypage-product-brand{
+  margin-bottom: 0;
+  
+  font-weight: bold;
+}
+
+.mypage-product-brand a{
+  font-size: 0.8em;
+}
+
+.mypage-product-brand a:hover{
+  text-decoration: underline;
+}
+
+.mypage-product-title a{
+  font-weight: bold;
+  font-size: 0.9em;
+}
+
+.mypage-product-title a:hover{
+  text-decoration: underline;
+  
+}
+
+/* 회원정보css */
+/* .edit-info {
+display: flex;
+width: 100%;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+border: 1px solid lightgray;
+padding: 20px;
+} */
+.user-infos{
+  font-size: 22px;
+}
+
+.user-infos li {
+position: relative;
+margin: 10px;
+}
+
+
+.user-infos input {
+width: 400px;
+height: 35px;
+right: -10;
+}
+
+.user-levelimg{
+  position:sticky;
+  top:100px;
+}
+
+.button-div{
+  display: block;
+  position:sticky;
+  top:200px;
+}
+
+.mypage-btn{
+    width: 100px;
+    height: 30px;
+    margin: 45px;
+    border : 3px solid #CB9DE7; color:#CB9DE7; background-color:white; font-weight: 900; border-radius:0.5vw;
+}
+.gotoUsedPoint{
+  border : 3px solid #CB9DE7; color:#CB9DE7; background-color:white; font-weight: 900; border-radius:0.5vw;
+}
+ .mypage-link:hover .mypage-btn {
+  background-color:#CB9DE7; color:#FCFA90;
+} 
+.Link-button{
+  margin: 10px;
+  width: 100px;
+  height: 30px;
+  border : 3px solid #CB9DE7; color:#CB9DE7; background-color:white; font-weight: 900; border-radius:0.5vw;
+}
+/* .button-div button :hover{
+background-color:#CB9DE7; color:#FCFA90;
+} */
+
+.Link-button:hover{
+background-color:#CB9DE7; color:#FCFA90;
+}
+
+.Mypage{
+display: flex;
+width: 100%;
+}
+.Mypage>div:first-child{
+display: block;
+width: 20%;
+}
+.Mypage>div:nth-child(2){
+display: block;
+width: 80%;
+
+}
+
+.edit-button{
+border : 3px solid #CB9DE7; color:#CB9DE7; background-color:white; font-weight: 900; border-radius:0.5vw;
+width: 400px; 
+margin-top: 20px;
+}
+.edit-button :hover{
+background-color:#CB9DE7; color:#FCFA90;
+}
+/*
+  내활동css
+*/
+
+.delete-button {
+  border : 3px solid #FCFA90; color:#CB9DE7; background-color:white; font-weight: 900;border-radius:0.5vw;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+
+.act-table th, .act-table td {
+  padding: 8px;
+  text-align: center;
+}
+
+.nf-td1 > .delete-button :hover{
+  background-color:#FCFA90; 
+  color:#CB9DE7;
+}
+
+
+
+.act-table th {
+  background-color: #f2f2f2;
+}
+
+/* .jefftable tr:hover {
+  background-color: #f5f5f5;
+} */
+.mys{
+  display: flex;
+  background-color: white;
+  margin-left: 200px;
+  margin-bottom: 30px;
+}
+.mys>button{
+  margin-left: 100px;
+}
+
+.my-like-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.my-like-table td {
+  width: 33.33%;
+  padding: 10px;
+  text-align: center;
+}
+
+.my-like-table img {
+  max-width: 100%;
+  height: auto;
+}
+
+.myShopLikes-table table{
+  border: none;
+}
+
+.product-content{
+width: 100%;
+}
+
+
+.product-content{
+width: 100%;
+}
+.product-content>table{
+
+justify-content: center;
+}
+.product {
+
+    width: 33.33%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+.product img {
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
+
+}
+.afterClick{
+  background-color: lightgray;
+}
+
+
+.mypage-Reception {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.receptionForm {
+  width: 80%;
+  max-width: 400px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.section1-2 {
+  margin-left: 35px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.btn-secondaryjeff {
+  border : 3px solid #CB9DE7; color:#CB9DE7; background-color:white; font-weight: 900; border-radius:0.5vw;
+  width: 200px; 
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+
+.btn-primaryjeff {
+  border : 3px solid #CB9DE7; color:#CB9DE7; background-color:white; font-weight: 900; border-radius:0.5vw;
+  width: 200px; 
+  margin-top: 20px;
+  margin-left: 20px;
+
+}
+
+
+.changeLocationButton{
+  border : 3px solid #CB9DE7; color:#CB9DE7; background-color:white; border-radius:0.5vw;
+  width: 120px;
+  text-align: center;
+  }
+.hangeLocationButton:hover{
+  background-color:#FCFA90; 
+  color:#CB9DE7;
+}
+
+.btn-primaryjeff:hover {
+  background-color:#FCFA90; 
+  color:#CB9DE7;
+}
+
+.ReceptionLabel{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px; 
+}
+
+.ReceptionText{
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+#contentTextarea{
+  resize: vertical;
+  height: 150px;
+}
+
+.close-modal{
+  color: #CB9DE7;
+  border: none;
+  background-color: white;
+}
+.close-modal :hover{
+  cursor: pointer;  
+} 
+.alert-content-link:hover {
+  cursor: pointer; /* 마우스를 가져다 댔을 때 포인터 커서로 변경 */
+}
+.gotoshop{
+  border : 3px solid #CB9DE7; color:#CB9DE7; background-color:white; font-weight: 900; border-radius:0.5vw;
+}
+
+.gotoshop :hover{
+  background-color:#FCFA90; 
+  color:#CB9DE7;
+}
+.gotoshop :hover .gotoshop>Link{
+  background-color:#FCFA90; 
+  color:#CB9DE7;
+}
+
+/* 베이지 : #DAD7CD
+초록 : #588157
+진초록 : #344E41 */

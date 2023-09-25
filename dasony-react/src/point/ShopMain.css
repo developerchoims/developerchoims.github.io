@@ -1,0 +1,122 @@
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.shop-container{
+    box-sizing: border-box;
+    font-family: 'HakgyoansimWoojuR';
+    font-weight: 900;
+    letter-spacing: 0.2vw;
+    color: #7A7A7A;
+}
+.shop-title{
+    padding: 12vh 0 2vh 0;
+    font-family: 'HakgyoansimWoojuR';
+    font-weight: 900;
+    letter-spacing: 0.2vw;
+    font-size: 2vw;
+}
+.cate-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.cate-box>a{
+    width: 20%;
+    height: 22vh;
+    font-size: 1.5vw;
+    text-align: center;
+    border : 3px solid #CB9DE7;
+    color:#CB9DE7; 
+    background-color:white; 
+    font-weight: 900; 
+    border-radius:0.5vw;
+    padding-top: 5%;
+}
+.cate-box>a:hover{
+    background-color:#CB9DE7; 
+    color:#FCFA90;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.shopBest-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    text-align: center;
+    font-family: 'HakgyoansimWoojuR';
+    font-weight: 900;
+    font-size: 1.2vw;
+    letter-spacing: 0.2vw;
+}
+
+.shopBest-item-img{
+    width: 90%;
+    height: 25vh;
+    line-height: 25vh;
+    position: relative;
+    overflow: hidden;
+    border: 1.5px solid #CB9DE7;
+    border-radius: 0.5vw;
+    margin: auto;
+}
+
+.shopBest-item-img>img{
+    width: 105%;
+    
+}
+.shopBest-item-img>img:hover{
+    opacity:0.7;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.shopBest-item-product{
+    font-size: 1.5vw;
+}
+.new-box{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.new-box>div{
+    width: 20vw;
+    height: 10vh;
+    text-align: center;
+    line-height: 10vh;
+    font-size: 1.5vw;
+    border : 3px solid #CB9DE7; 
+    color:#CB9DE7; 
+    background-color:white; 
+    font-weight: 900; 
+    border-radius:0.5vw;
+}
+.new-box>div:hover{
+    background-color:#CB9DE7; 
+    color:#FCFA90;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+.shop-title a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #CB9DE7; 
+    font-size: 1.5vw;
+}
+.shop-title a:hover{
+    color:#FCFA90;
+}
+.shop-cate a:hover{
+    color:#FCFA90;
+}

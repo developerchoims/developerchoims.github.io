@@ -1,0 +1,83 @@
+.admin-user-head{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    font-size: 2vw;
+    font-weight: 900;
+}
+.admin-user-head button, .admin-user-head input{
+    font-size: 1.2vw;
+    height: 50%;
+}
+
+
+.admin-user-table{
+    width: 100%;
+}
+
+.admin-user-table>table{
+    width: 100%;
+    text-align: center;
+}
+.admin-user-table>table>thead{
+    border-bottom: 1px solid #7A7A7A;
+    height: 7vh;
+}
+.admin-user-table>table>tbody>tr{
+    height: 12vh;
+    border-bottom: 1px solid #7A7A7A;
+}
+.admin-user-table>table>tbody>tr:hover{
+    cursor: pointer;
+    background-color: #e7e7e7;
+    transition-duration: 0.5s;
+
+}
+
+.admin-user-table th:first-child{
+    width: 15%;
+}
+.admin-user-table th:nth-child(2){
+    width: 20%;
+}
+.admin-user-table th:nth-child(3){
+    width: 15%;
+}
+.admin-user-table th:nth-child(4){
+    width: 20%;
+}
+.admin-user-table th:nth-child(5){
+    width: 20%;
+}
+.admin-user-table th:nth-child(6){
+    width: 10%;
+}
+.admin-user-table button{
+    display: block;
+    font-size: 85%;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+
+
+.adminUser-pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0 10vh 0;
+}
+.adminUser-pagination>*:first-child{
+    width: 90%;
+    justify-content: center;
+    padding-right: 5%;
+}
+
+.adminUser-pagination>div{
+    width: 10%;
+    justify-content: center;
+}
+
+.admin-user-container .pagination-bar>div{
+    padding-left: 20%;
+}

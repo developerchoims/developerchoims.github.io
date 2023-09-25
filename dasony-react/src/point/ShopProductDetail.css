@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.shopProductDetail-container{
+    display: flex;
+    font-family: 'HakgyoansimWoojuR';
+    padding-top: 10vh;
+    font-weight: 900;
+    letter-spacing: 0.1vw;
+}
+
+/*왼쪽 영역*/
+.shopProductDetail-container>div:first-child{
+    width: 30%;
+    text-align: center;
+}
+/*오른쪽 영역*/
+.shopProductDetail-container>div:last-child{
+    width: 70%;
+}
+
+.product-info-img{
+    width: 80%;
+    border: 3px solid #CB9DE7; ;
+    border-radius: 0.5vw;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+.product-info-img>img{
+    width: 100%;
+}
+/*왼쪽 영역-상단부분(상점이름, 하트)*/
+.product-info-head{
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
+.product-info-head>div:first-child{
+    width: 90%;
+    font-size: 75%;
+    text-align: left;
+    line-height: 250%;
+}
+.product-info-head>div:last-child{
+    width: 20%;
+    margin: auto;
+}
+/*왼쪽 영역-중간부분*/
+.product-info-middle{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: auto;
+}
+.product-info-middle>div:first-child{
+    width: 70%;
+}
+.product-info-middle-left{
+    text-align: left;
+}
+.product-info-middle-left>div:first-child{
+    font-size: 75%;
+}
+.product-info-middle-left>div:last-child{
+    font-size: 75%;
+}
+.product-info-middle>div:last-child{
+    width: 30%;
+    margin: auto;
+}
+.product-info-middle button{
+    border : 3px solid #CB9DE7; 
+    color:#CB9DE7; 
+    background-color:white; 
+    font-weight: 900; 
+    border-radius:0.5vw;
+    width: 70%;
+    height: 5.5vh;
+    font-size: 65%;
+    letter-spacing: 0.1vw;
+}
+.product-info-middle button:hover{
+    background-color:#CB9DE7; 
+    color:#FCFA90;
+    transition-duration: 0.5s;
+}
+
+.buy-info{
+    padding: 0 2% 0 2%;
+}
+.buy-info>div>div{
+    font-size: 1.5vw;
+}
+.buy-info>div{
+    font-size:1vw;
+}
+
+.modalButton-yes{
+    border: 3px solid #CB9DE7; 
+    color:#CB9DE7; 
+    background-color:white; 
+    font-weight: 900;
+    border-radius:0.5vw;
+    width: 20%;
+    height: 7vh;
+}
+
+.modal{
+    font-family: 'HakgyoansimWoojuR';
+    font-weight: 900;
+    letter-spacing: 0.1vw;
+    font-size: 1.5vw;
+    color: #7A7A7A;
+}
+.modalButton-yes:hover{
+    background-color:#CB9DE7; 
+    color:#FCFA90;
+    transition-duration:0.5s
+}
+.modalButton-no{
+    border : 3px solid #FCFA90; 
+    color:#CB9DE7; 
+    background-color:white; 
+    font-weight: 900;
+    border-radius:0.5vw;
+    width: 20%;
+    height: 7vh;
+}
+.modalButton-no:hover{
+    background-color:#FCFA90;
+    color:#CB9DE7;
+    transition-duration:0.5s
+}

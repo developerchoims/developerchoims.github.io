@@ -1,0 +1,315 @@
+.BoardDetail-wrapper{
+  width: 100%;
+  /* height: 1000px; */
+
+}
+.BoardDetail-wrapper>*{
+  font-family: 'HakgyoansimWoojuR';
+
+}
+.BoardDetail-side-wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+.BoardDetail-main-wrapper{
+  width: 95%;
+}
+.BoardDetail-side-container{
+  /* border: 1px solid red; */
+  width: 5%;
+  margin-left: 1vw;
+}
+.BoardDetail-side-by-side{
+  position: sticky;
+  top: 75vh;
+  right: 300px;
+}
+/* 다른 스타일을 덮어씌우기 위해 우선순위를 높임 */
+.BoardDetail-side-haert .bi{
+  font-size: 30px;
+}
+.BoardDetail-side-up{
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+}
+.BoardDetail-side-up .bi{
+  font-size: 30px;
+}
+
+.BoardDetail-head-list{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid gray;
+  justify-content: space-between;
+  display: flex;
+  padding: 0 2vw 0;
+}
+.BoardDetail-head-list-text{
+  font-family: 'HakgyoansimWoojuR';
+  font-size: x-large;
+  font-weight: 800;
+  margin-left: 20px;
+  /* border: 1px solid red; */
+}
+
+
+.BoardDetail-boardlist-title-wrapper{
+  width: 100%;
+  /* height: 100px; */
+  border-bottom: 1px solid gray;
+}
+.BoardDetail-boardlist-title-flexdiv{
+  display: flex;
+  justify-content: space-between;
+}
+.BoardDetail-boardlist-title-container{
+  margin: 10px;
+  padding: 0 1vw 0;
+  /* border: 1px solid red; */
+  width: 80%;
+  height: 30px;
+}
+.BoardDetail-boardlist-title-keyword{
+  margin: 0 8px 0;
+  color:  aquamarine;
+  font-family: 'HakgyoansimWoojuR';
+  font-weight: 900;
+  font-size: 22px;
+}
+.BoardDetail-boardlist-title{
+  margin: 0 8px 0;
+  color: #373737;
+  font-family: 'HakgyoansimWoojuR';
+  font-weight: 700;
+  font-size: 22px;
+}
+
+.BoardDetail-boardlist-title-userinfo-container{
+  justify-content: space-between;
+  display: flex;
+  padding: 0 1vw 0;
+  /* border: 1px solid red; */
+  width: 95%;
+  height: 50px;
+  margin: 10px;
+}
+
+.BoardDetail-boardlist-title-userinfo-img>img{
+  width: 45px;
+  height: 45px;
+  border-radius: 25vh;
+}
+.BoardDetail-boardlist-title-userinfo>span{
+  margin: 0 0.2vw 0;
+}
+.BoardDetail-boardlist-title-userinfo-nikname{
+  font-size: 20px;
+  font-weight: normal;
+  color: #555555;
+}
+.BoardDetail-boardlist-title-views-wrapper{
+ padding-top: 1vh;
+}
+.BoardDetail-boardlist-title-views-wrapper>span{
+  margin: 0 1vw 0;
+}
+.BoardDetail-boardlist-content-wrapper{
+  width: 100%;
+  /* border: 1px solid gray; */
+}
+.BoardDetail-boardlist-content{
+  width: 98%;
+  padding: 0 0 5vh;
+  margin: 0 auto;
+  white-space: pre-line
+}
+.BoardDetail-userImg-views-container{
+  /* border: 1px solid purple; */
+  width: 100%;
+  text-align: center;
+}
+.BoardDetail-userImg-views-li>img{
+  height: 30vh;
+}
+
+/* 답글 댓글 Reply 시작 */
+.BoardDetail-boardlist-reply-wrapper{
+  width: 100%;
+  border: 1px solid #d4d4d4;
+  border-radius: 1vh;
+  background-color: #f4f4f4;
+}
+.BoardDetail-boardlist-reply{
+  margin-top: 10px;
+}
+.BoardDetail-boardlist-reply-wrapper>ul{
+  list-style: none;
+}
+.BoardDetail-boardlist-reply{
+  width: 98%;
+  /* border: 1px solid gray; */
+  
+}
+.BoardDetail-boardlist-reply-container{
+  justify-content: space-between;
+  display: flex;
+  
+}
+.BoardDetail-boardlist-reply-content-wrapper{
+  /* border: 1px solid yellowgreen; */
+  width: 100%;
+  padding-left: 1vw;
+}
+.BoardDetail-boardlist-reply-btn{
+  margin: 0 1vw 0;;
+}
+.BoardDetail-boardlist-reply-btn>button{
+  border: none;
+  border-radius: .5vh;
+  padding: 5px;
+  background-color: #CB9DE7;
+  color:#FCFA90;
+}
+.Board-reply-recoment-accused-span{
+  margin: 0 0.5vw 0 0;
+}
+.Board-reply-recoment-accused-btn{
+  border: none;
+}
+.BoardDetail-boardlist-meetball-btn{
+  border: none;
+}
+.BoardDetail-boardlist-reply-userinfo-wrapper>span{
+  margin: 0 0.2vw 0;
+}
+.BoardDetail-boardlist-reply-userinfo-nikname{
+  font-size: 20px;
+  font-weight: normal;
+}
+.BoardDetail-boardlist-reply-userinfo-date{
+  font-size: 16px;
+  font-weight: normal;
+}
+.BoardDetail-boardlist-reply-form-wrapper{
+  width: 100%;
+  /* border: 1px solid gray; */
+  
+}
+.BoardDetail-boardlist-reply-form-container{
+  width: 95%;
+  /* border: 1px solid gray; */
+  border-radius: 1vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+.BoardDetail-boardlist-reply-form{
+  width: 90%;
+}
+.BoardDetail-boardlist-reply-form-input{
+  width: 100vh;
+  height: 7vh;
+  padding-inline-start: 30px;
+  border: none;
+  align-content: space-between;
+  display: flex;
+  border-radius: 1vh;
+  outline: none;
+}
+
+/* 답글 댓글 Reply 끝 */
+
+/* 리댓 답답글 Reply 시작 */
+.Board-reply-recoment-wrapper{
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.Board-reply-recoment{
+  margin-top: 10px;
+}
+.Board-reply-recoment-container{
+  justify-content: space-between;
+  display: flex;
+}
+.replycoment-form-container{
+  width: 95%;
+  /* border: 1px solid gray; */
+  border-radius: 1vh;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+}
+.replycoment-form{
+  width: 90%;
+}
+.replycoment-input{
+  width: 45vw;
+  height: 7vh;
+  padding-inline-start: 30px;
+  border: none;
+  align-content: space-between;
+  /* display: flex; */
+  border-radius: 1vh;
+  outline: none;
+}
+
+/* 리댓 답답글 Reply 끝 */
+
+
+
+
+/*boardVS Css*/
+.vote-content-box>div{
+  text-align: center;
+  font-size: 150%;
+  word-wrap: break-word;
+  overflow: hidden;
+  color: #7A7A7A;
+}
+.vote-div:hover{
+  cursor: pointer;
+  background-color: #CB9DE7;
+  color: #FCFA90;
+  transition-duration: 0.5s;
+  font-weight: 900;
+  letter-spacing: 0.2vw;
+}
+.vote-content-txt{
+  text-align: center;
+  font-size: 120%;
+}
+
+#clicked{
+  background-color: #CB9DE7;
+  color: #FCFA90;
+  transition-duration: 0.5s;
+  font-weight: 900;
+  letter-spacing: 0.2vw;
+}
+
+
+.BoardDetail-boardlist-reply-wrapper{
+  margin-bottom: 10%;
+}
+
+.BoardDetail-boardlist-reply-form-wrapper{
+  height: 10vh;
+}
+.BoardDetail-boardlist-reply-form-container{
+  width: 80%;
+}
+.BoardDetail-boardlist-reply-form-container button{
+  border-radius: 0.5vw;
+  letter-spacing: 0.1vw;
+  font-weight: 100;
+}
+.BoardDetail-boardlist-reply-form-container button:hover{
+  transition-duration: 0.5s;
+}
+.replycoment-form-container{
+  width: 100%;
+}

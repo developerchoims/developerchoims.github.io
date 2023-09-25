@@ -1,0 +1,39 @@
+
+/*제목 영역*/
+.shopCate-main-container a{
+    font-size: 1.5vw;
+    color: #7A7A7A;
+}
+.shopCate-box-head{
+    display: flex;
+    justify-content: space-between;
+    height: 12vh;
+    padding-top: 5vh;
+}
+.shopCate-box-head>div:first-child{
+    font-weight: 900;
+    font-size: 2vw;
+}
+
+
+/*상점 영역*/
+.shopCate-store-box{
+    display: flex;
+    justify-content: left;
+}
+.shopCate-store-box a{
+    color: #CB9DE7;
+}
+.shopCate-store-box>div{
+    width: 20%;
+    height: 10vh;
+    line-height: 10vh;
+    color: #CB9DE7;
+    text-align: center;
+    border-radius: 0.5vw;
+    border : 3px solid #CB9DE7;
+    font-weight: 900;
+}
+.shopCate-store-box>div:hover{
+    cursor: pointer;
+}

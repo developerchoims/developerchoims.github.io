@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="boardShMap">
+
+	<resultMap id="boardMap" type="board">
+		<id column="BOARD_NO" property="boardNo"/>
+		<result column="USER_NO" property="userNo"/>
+		<result column="BOARD_TITLE" property="boardTitle"/>
+		<result column="BOARD_WRITE_DATE" property="boardWriteDate"/>
+		<result column="BOARD_VIEWS" property="boardViews"/>
+		<result column="BOARD_CONTENT" property="boardContent"/>
+		<result column="BOARD_STATUS" property="boardStatus"/>	
+		<result column="BOARD_TAG" property="boardKeyword"/>
+	</resultMap>
+	
+	<resultMap id="boardVideoMap" type="BoardVideo">
+		<id column="VIDEO_NO" property="videoNo"/>
+		<result column="VIDEO_MOD_NAME" property="videoModName"/>
+		<result column="VIDEO_ORI_NAME" property="videoOriName"/>
+		<result column="VIDEO_PATH" property="videoPath"/>
+		<result column="VIDEO_UPLOAD_DATE" property="videoUploadDate"/>
+		<result column="BOARD_NO" property="boardNo"/>
+		<result column="USER_NO" property="userNo"/>	
+	</resultMap>
+	
+	<resultMap id="shortsUpdateMap" type="shortsUpdate">
+		<id column="BOARD_NO" property="boardNo"/>
+		<result column="BOARD_TITLE" property="boardTitle"/>
+		<result column="BOARD_WRITE_DATE" property="boardWriteDate"/>
+		<result column="BOARD_CONTENT" property="boardContent"/>
+		<result column="BOARD_TAG" property="boardKeyword"/>
+		<result column="VIDEO_MOD_NAME" property="videoModName"/>
+		<result column="VIDEO_PATH" property="videoPath"/>
+	</resultMap>
+	
+	<insert id="addBoardSh" parameterType="board">
+		INSERT ALL
+		INTO BOARD
+		VALUES(
+			SEQ_BNO.nextval,
+			#{userNo},
+			#{boardTitle},
+			#{boardWriteDate},
+			DEFAULT, 
+			#{boardContent},
+			'Y', 
+			#{boardCateNo}
+		)
+		INTO BOARD_KEYWORD
+		VALUES (
+		    #{boardKeyword},
+		    SEQ_BNO.currval
+		)
+		SELECT * FROM DUAL
+	</insert> 
+		
+	
+	<select id="findBoardNo" parameterType="board" resultType="int">
+		SELECT BOARD_NO
+		FROM BOARD
+		WHERE USER_NO=#{userNo}
+		AND BOARD_TITLE = #{boardTitle}
+		AND BOARD_CONTENT = #{boardContent}
+	</select>
+	
+	<update id="addBoardVedio" parameterType="java.util.List">
+		<foreach collection="list" item="item" index="index" separator=" " open="INSERT ALL" close="SELECT * FROM DUAL">
+        INTO BOARD_VIDEO
+        (
+            VIDEO_NO,
+            VIDEO_MOD_NAME,
+            VIDEO_ORI_NAME,
+            VIDEO_PATH,
+            VIDEO_UPLOAD_DATE,
+            BOARD_NO,
+            USER_NO
+        )
+	        VALUES
+	        (
+	            #{item.boardNo}||SEQ_BVNO.nextval||#{index},
+	            #{item.videoModName},
+	            #{item.videoOriName},
+	            #{item.videoPath},
+	            #{item.videoUploadDate},
+	            #{item.boardNo},
+	            #{item.userNo}
+	        )
+	    </foreach>
+	</update>
+	
+	<select id="shortsUpdate" parameterType="int" resultMap="shortsUpdateMap">
+		SELECT *
+		FROM BOARD B
+		LEFT JOIN BOARD_VIDEO V ON B.BOARD_NO = V.BOARD_NO
+		LEFT JOIN MEMBER M ON B.USER_NO = M.USER_NO
+		LEFT JOIN BOARD_KEYWORD K ON B.BOARD_NO = K.BOARD_NO
+		WHERE B.BOARD_NO = #{boardNo}
+	</select>
+	
+	
+	<update id="shBoardUpdateSub" parameterType="Board">
+		UPDATE BOARD
+		SET 
+			BOARD_TITLE = #{boardTitle},
+			BOARD_CONTENT = #{boardContent},
+			BOARD_WRITE_DATE = #{boardWriteDate}
+		WHERE BOARD_NO = #{boardNo}
+	</update>
+	
+	<update id="shTagUpdateSub" parameterType="Board">
+		UPDATE BOARD_KEYWORD
+		SET
+			BOARD_TAG = #{boardKeyword}
+		WHERE BOARD_NO = #{boardNo}
+	</update>
+	
+	<delete id="videoDelete" parameterType="Board">
+		DELETE BOARD_VIDEO
+		WHERE BOARD_NO = #{boardNo}
+	</delete>
+
+</mapper>

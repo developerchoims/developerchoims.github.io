@@ -1,0 +1,54 @@
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.shopCate-container{
+    font-family: 'HakgyoansimWoojuR';
+    font-size: 1.5vw;
+    color: #7A7A7A;
+}
+
+
+/*카테고리 버튼*/
+.shopCate-title-box{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5vh;
+}
+
+.shopCate-title-box>div{
+    width: 20%;
+    height: 10vh;
+    line-height: 10vh;
+    color: #CB9DE7;
+    text-align: center;
+    border-radius: 0.5vw;
+    border : 3px solid #CB9DE7;
+    font-weight: 900;
+}
+.shopCate-title-box>div:hover{
+    cursor: pointer;
+}
+
+
+/*검색 영역*/
+.shopCate-search-box{
+    height: 12vh;
+    padding-top: 5vh;
+}
+.shopCate-search-box input:first-child{
+    border:2px solid #CB9DE7;
+    border-radius:0.5vw;
+    height: 5vh;
+}
+.shopCate-search-box input:last-child{
+    width: 5vw;
+    height: 5vh;
+    border : 3px solid #CB9DE7; 
+    color:#CB9DE7; 
+    background-color:white; 
+    font-weight: 900; 
+    border-radius:0.5vw;
+}

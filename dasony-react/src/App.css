@@ -1,0 +1,42 @@
+@font-face {
+  font-family: 'HakgyoansimWoojuR';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+/*메인영역, 푸터영역*/
+.for-main{
+  width: 90%;
+  display: flex;
+  padding-left: 25%;
+  padding-top: 10vh;
+  font-family: 'HakgyoansimWoojuR';
+}
+/*메인 페이지 내부*/
+#main-window{
+  width: 60%;
+}
+#right-window{
+  width:40%;
+  padding: 0 2% 0 2%;
+}
+
+/*메인 페이지 이외의 페이지가 들어가는 부분*/
+.for-normal-page{
+  width: 90%;
+  display: block;
+  padding: 10vh 0 0 25%;
+  font-family: 'HakgyoansimWoojuR';
+}
+/*로그인 안 한 페이지가 들어가는 부분*/
+.main-container{
+  width: 75%;
+  height: 100vh;
+  position: relative;
+  z-index: 999;
+  background-color: white;
+}
+

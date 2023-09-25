@@ -1,0 +1,31 @@
+
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+.shop-nav{
+    display: flex;
+    height: 10vh;
+    color: #7A7A7A;
+}
+.shop-nav a:hover{
+    color: #CB9DE7;
+    transition-duration: 0.2s;
+}
+.shop-nav>div{
+    width: 100%;
+}
+.shop-nav .bi{
+    font-size: 1.8vw;
+}
+.icon{
+    display: flex;
+    justify-content: space-between;
+    padding:0 10% 0 0;
+}
+.user-info{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 0 0 5%;
+}
+.bi>span{
+    font-size: 1.3vw;
+}

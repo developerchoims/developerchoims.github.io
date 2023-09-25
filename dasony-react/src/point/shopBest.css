@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.shopBest-title{
+    font-family: 'HakgyoansimWoojuR';
+    font-weight: 900;
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+    padding: 5vh 0 2vh 0;
+    color: #7A7A7A;
+}
+.shopBest-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    text-align: center;
+    font-family: 'HakgyoansimWoojuR';
+    font-weight: 900;
+    font-size: 1.2vw;
+    letter-spacing: 0.2vw;
+    color: #7A7A7A;
+}
+.shopBest-item-img{
+    width: 90%;
+    height: 25vh;
+    line-height: 25vh;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.5vw;
+    margin: auto;
+}
+
+.shopBest-item-img>img{
+    width: 105%;
+    
+}
+.shopBest-item-img>img:hover{
+    opacity:0.7;
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.shopBest-item-product{
+    font-size: 1.5vw;
+}

@@ -1,0 +1,72 @@
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.userLocation-container{
+    font-family: 'HakgyoansimWoojuR';
+    text-align: center;
+    padding-top: 10vh;
+    margin: auto;
+    color: #7A7A7A;
+}
+.userLocation-container>h1{
+    font-family: 'ImcreSoojin';
+}
+.userLocation-container>h5{
+    font-size: 2vw;
+    height: 10vh;
+    line-height: 10vh;
+    margin: 5vh 0 5vh 0;
+}
+
+.userLocation-container>table{
+    text-align: center;
+    width: 40vw;
+    margin: auto;
+}
+.userLocation-container>table tr{
+    height: 10vh;
+}
+.userLocation-container>table tr>th{
+    width: 30%;
+    font-size: 2vw;
+}
+.userLocation-container>table tr>td{
+    width: 70%;
+    font-size: 2vw;
+}
+.userLocation-container>table tr>td>select{
+    width: 80%;
+    height: 5vh;
+}
+.userLocation-container button{
+    width: 10%;
+    height: 8vh;
+    border : 3px solid #CB9DE7; 
+    color:#CB9DE7; 
+    background-color:white; 
+    font-weight: 900; 
+    border-radius:0.5vw;
+    font-size: 2vw;
+    margin-top:5vh ;
+}
+.userLocation-container button:hover{
+    background-color:#CB9DE7; 
+    color:#FCFA90;
+
+}
+
+.userLocation-container select{
+    border: 2px solid #CB9DE7;
+    border-radius:0.5vw;
+    color: #7A7A7A;
+}

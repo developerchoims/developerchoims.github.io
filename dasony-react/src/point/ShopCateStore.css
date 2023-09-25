@@ -1,0 +1,28 @@
+
+.shopCate-store-main a{
+    font-size: 1.5vw;
+    color: #CB9DE7;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.shopCate-store-title{
+    font-weight: 900;
+    font-size: 2vw;
+    height: 12vh;
+    padding-top: 5vh;
+}
+
+.shopCate-store-box{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2vw;
+    text-align: center;
+    
+}
+.shopCate-store-box>div{
+    width: 100%;
+}
+

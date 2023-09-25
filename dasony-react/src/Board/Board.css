@@ -1,0 +1,1083 @@
+/* BoardList css 시작 */
+
+.BoardList-head-title-wrapper{
+  /* border: 1px solid gray; */
+  width: 100%;
+  height: 40px;
+  padding-inline-start: 52px;
+}
+
+  /* BoardListHeader css 시작*/
+  .BoardList-head-title-text{
+    font-family: 'HakgyoansimWoojuR';
+    font-size: x-large;
+    font-weight: 800;
+  }
+  .boardListSelect{
+    border: none;
+    width: 8vw;
+    height: 3vh;
+  }
+  .BoardList-head-title-btn{
+    width: 5vw;
+    height: 3vh;
+    font-family: 'HakgyoansimWoojuR';
+    margin-left: 43px;
+    border: 2.7px solid #CB9DE7;
+    background-color:white;
+    font-weight: 500;
+    border-radius:0.2vw;
+  }
+  .BoardList-head-title-btn:hover{
+    background-color:#CB9DE7; 
+  }
+  /* BoardListHeader css 끝*/
+
+.boardList-container{
+  border: 1px solid gray;
+  border-bottom: none;
+  /* width: 60%;  */
+  padding: 0 5%;
+  text-align: center;
+  height: 100%;
+  min-height: 100vh;
+}
+.boardList-search-title-wrapper{
+border-bottom: 1px solid gray;
+width: 100%;
+height: 150px;
+padding: 10px 0 10px;
+margin: 1px;
+}
+.boardList-search-input-title-wrapper{
+  height: 100%;
+  position: relative;
+}
+.boardList-search-input-title-img-div,.boardList-search-input-tag-img-div{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 20px;
+  left: 75px;
+}
+/* .boardList-search-input-title-imgcon,.boardList-search-input-tag-icon{
+  width: 20px;
+  height: 20px;
+  
+} */
+.boardList-search-input-tag-wrapper{
+  position: relative;
+}
+.boardList-search-box-title{
+  border: 1px solid #588157;
+  width: 90%;
+  height: 50px;
+  border-radius: 4px;
+  padding: 5px 5px 5px;
+  margin: 5px 10px 5px 50px;
+  font-family: 'HakgyoansimWoojuR';
+  padding-inline-start: 52px;
+  text-align: start;
+}
+.boardList-search-input-title{
+  border: none;
+  outline: none;
+  margin-top: 6px;
+  display: flex;
+  width: 80%;
+
+}
+.boardList-search-box-tag {
+  border: 1px solid #588157;
+  position: relative;
+  width: 90%;
+  height: 50px;
+  border-radius: 4px;
+  padding: 5px 5px 5px;
+  margin: 5px 10px 5px 50px;
+  font-family: 'HakgyoansimWoojuR';
+  padding-inline-start: 52px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: inherit;
+}
+
+.searchKeyword-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  gap: 5px;
+}
+
+.sKeyword {
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(234, 234, 234);
+  height: 20px;
+}
+.boardSearchClose{
+  font-size: 3px;
+  padding: 13px 5px 0;
+}
+
+.boardList-search-input-tag {
+  border: none;
+  outline: none;
+  flex: 1;
+  display: flex;
+
+}
+
+.boardList-search-btn{
+border: 1px solid red;
+width: 70%;
+height: 50px;
+border-radius: 4px;
+font-family: 'HakgyoansimWoojuR';
+background-color: #588157;
+color: white;
+border: none;
+}
+.boardList-search-reset-btn{
+border: none;
+width: 1px;
+margin-left: 5.5vw;
+margin-right: 10px;
+display: block;
+}
+.boardList-search-reset-btn-icon{
+/* border: 1px solid red; */
+background-size: cover;
+border: none;
+height: 50px;
+display: inline-block;
+}
+.boardList-search-reset-btn-text{
+  margin-left: 10px;
+  display: block;
+}
+
+.boardList-list-ul-wrapper{
+/* border: 1px solid red; */
+width: 98%;
+height: 100%;
+margin: 10px -4px 10px;
+text-align: left;
+list-style:none;
+padding-left: 0px;
+
+}
+.boardList-list-content-container{
+/* border: 1px solid red; */
+width: 86%;
+height: 100%;
+text-align: left;
+display: inline-block;
+overflow: hidden;
+}
+.boardList-list-keyword{
+border: none;
+background-color: #588157;
+color: white;
+text-align: center;
+font-size: smaller;
+width: 2.5vw;
+height: 2vh;
+margin: 2px 0 2px;
+border-radius: 4px;
+font-family: 'HakgyoansimWoojuR';
+}  
+.boardList-list-content-title{
+/* border: 1px solid red; */
+height: 30px;
+margin: 2px 0 2px;
+font-weight: 600;
+font-size: x-large;
+color: rgb(50, 50, 50);
+font-family: 'HakgyoansimWoojuR';
+
+}
+.boardList-list-content{
+/* border: 1px solid red; */
+height: 40px;
+margin: 2px 0 2px;
+font-weight: 200;
+font-size: 15px;
+color: gray;
+font-family: 'HakgyoansimWoojuR';
+
+}
+.boardList-list-content-info{
+/* border: 1px solid red; */
+width: 58%;
+height: 20px;
+margin: 2px 0 2px;
+font-size: small;
+display: inline-block;
+
+}
+.boardList-list-content-info>span{
+margin: 5px 4px 0;
+}
+.boardList-list-content-action{
+/* border: 1px solid red; */
+width: 40%;
+height: 20px;
+margin: 2px 0 2px;
+font-size: 13px;
+text-align: end;
+display: inline-block;
+
+}
+.boardList-list-content-action>span>img{
+width: 18px;
+height: 17px;
+}
+.boardList-list-img{
+/* border: 1px solid red; */
+width: 7vw;
+height: 7vw;
+margin: 5px;
+float: right;
+border-radius:0.5vw;
+overflow: hidden;
+
+}
+.boardList-list-img>img{
+  width: 100%;
+  border-radius:0.5vw;
+}
+/* BoardList css 끝 */
+
+/* BoardDTitle css 시작 */
+
+/* BoardDTitle css 끝 */
+
+
+/* BoardList css 시작 */
+
+.BoardList-head-title-wrapper{
+  /* border: 1px solid gray; */
+  width: 100%;
+  height: 40px;
+  padding-inline-start: 52px;
+}
+
+  /* BoardListHeader css 시작*/
+  .BoardList-head-title-text{
+    font-family: 'HakgyoansimWoojuR';
+    font-size: x-large;
+    font-weight: 800;
+  }
+  .boardListSelect{
+    border: none;
+    width: 8vw;
+    height: 3vh;
+  }
+  /* BoardListHeader css 끝*/
+
+.boardList-search-title-wrapper{
+border-bottom: 1px solid gray;
+width: 100%;
+height: 150px;
+padding: 10px 0 10px;
+margin: 1px;
+}
+.boardList-search-input-title-wrapper{
+  height: 100%;
+  position: relative;
+}
+.boardList-search-input-title-img-div,.boardList-search-input-tag-img-div{
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 20px;
+  left: 75px;
+}
+/* .boardList-search-input-title-imgcon,.boardList-search-input-tag-icon{
+  width: 20px;
+  height: 20px;
+  
+} */
+.boardList-search-input-tag-wrapper{
+  position: relative;
+}
+.boardList-search-box-title{
+  border: 1px solid #588157;
+  width: 90%;
+  height: 50px;
+  border-radius: 4px;
+  padding: 5px 5px 5px;
+  margin: 5px 10px 5px 50px;
+  font-family: 'HakgyoansimWoojuR';
+  padding-inline-start: 52px;
+  text-align: start;
+}
+.boardList-search-input-title{
+  border: none;
+  outline: none;
+  margin-top: 6px;
+  display: flex;
+  width: 80%;
+
+}
+.boardList-search-box-tag {
+  border: 1px solid #588157;
+  position: relative;
+  width: 90%;
+  height: 50px;
+  border-radius: 4px;
+  padding: 5px 5px 5px;
+  margin: 5px 10px 5px 50px;
+  font-family: 'HakgyoansimWoojuR';
+  padding-inline-start: 52px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: inherit;
+}
+
+.searchKeyword-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; 
+  gap: 5px;
+}
+
+.sKeyword {
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  background-color: rgb(234, 234, 234);
+  height: 20px;
+}
+.boardSearchClose{
+  font-size: 3px;
+  padding: 13px 5px 0;
+}
+
+.boardList-search-input-tag {
+  border: none;
+  outline: none;
+  flex: 1;
+  display: flex;
+
+}
+
+.boardList-search-btn{
+border: 1px solid red;
+width: 70%;
+height: 50px;
+border-radius: 4px;
+font-family: 'HakgyoansimWoojuR';
+background-color: #588157;
+color: white;
+border: none;
+}
+.boardList-search-reset-btn{
+border: none;
+width: 1px;
+margin-left: 5.5vw;
+margin-right: 10px;
+display: block;
+}
+.boardList-search-reset-btn-icon{
+/* border: 1px solid red; */
+background-size: cover;
+border: none;
+height: 50px;
+display: inline-block;
+}
+.boardList-search-reset-btn-text{
+  margin-left: 10px;
+  display: block;
+}
+
+.boardList-list-ul-wrapper{
+/* border: 1px solid red; */
+width: 98%;
+height: 100%;
+margin: 10px -4px 10px;
+text-align: left;
+list-style:none;
+padding-left: 0px;
+
+}
+.boardList-list-content-container{
+/* border: 1px solid red; */
+width: 86%;
+height: 100%;
+text-align: left;
+display: inline-block;
+overflow: hidden;
+}
+.boardList-list-keyword{
+border: none;
+background-color: #588157;
+color: white;
+text-align: center;
+font-size: smaller;
+width: 2.5vw;
+height: 2vh;
+margin: 2px 0 2px;
+border-radius: 4px;
+font-family: 'HakgyoansimWoojuR';
+}  
+.boardList-list-content-title{
+/* border: 1px solid red; */
+height: 30px;
+margin: 2px 0 2px;
+font-weight: 600;
+font-size: x-large;
+color: rgb(50, 50, 50);
+font-family: 'HakgyoansimWoojuR';
+
+}
+.boardList-list-content{
+/* border: 1px solid red; */
+height: 40px;
+margin: 2px 0 2px;
+font-weight: 200;
+font-size: 15px;
+color: gray;
+font-family: 'HakgyoansimWoojuR';
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+
+}
+.boardList-list-content-info{
+/* border: 1px solid red; */
+width: 58%;
+height: 20px;
+margin: 2px 0 2px;
+font-size: small;
+display: inline-block;
+
+}
+.boardList-list-content-info>span{
+margin: 5px 4px 0;
+}
+.boardList-list-content-action{
+/* border: 1px solid red; */
+width: 40%;
+height: 20px;
+margin: 2px 0 2px;
+font-size: 13px;
+text-align: end;
+display: inline-block;
+
+}
+.boardList-list-content-action>span>img{
+width: 18px;
+height: 17px;
+}
+
+
+
+/* BoardList css 끝 */
+
+/* BoardDTitle css 시작 */
+
+/* BoardDTitle css 끝 */
+
+
+/* BoardDetail css 시작 */
+.BoardWriteForm-wrapper{
+  width: 1300px;
+  height: 100%;
+}
+.BoardWriteForm-head-title-wrapper{
+  /* border: 1px solid gray; */
+  width: 1300px;
+  height: 100%;
+}
+.boardDetail-head-title{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid gray;
+
+}
+.boardDetail-head-title-text{
+  font-family: 'HakgyoansimWoojuR';
+  font-size: x-large;
+  font-weight: 800;
+  margin-left: 20px;
+
+}
+.boardDetail-category-div{
+  /* border: 1px solid red; */
+  height: 60px;
+}
+#boardDetail-category{
+  border: 1px solid #588157;
+  width: 85%;
+  height: 50px;
+  border-radius: 4px;
+  padding: 5px 5px 5px;
+  margin: 5px 0 5px 10px;
+  font-family: 'HakgyoansimWoojuR';
+  padding-inline-start: 52px;
+  text-align: start;
+}
+.boardDetail-category{
+  /* border: 1px solid purple; */
+  width: 100px;
+  height: 10px;
+}
+
+/* BoardDetail css 끝 */
+
+/* Vote 시작 */
+.Vote-Content-container{
+  border: 1px solid gray;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  text-align: center;
+
+}
+.Vote-Content-btn-wrapper{
+  /* border: 1px solid red; */
+  width: 50%;
+  height: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.Vote-button-container {
+  display: flex;
+  align-items: center;
+}
+.Vote-button-controll{
+  border: 1px solid rgb(186, 186, 186);
+  width: 200px;
+  height: 200px;
+  justify-content: space-between;
+  margin: 10px;
+  /* background-color:#FCFA90;
+  color:#CB9DE7; */
+  font-family: 'HakgyoansimWoojuR';
+  font-size: larger;
+  text-align: center;
+  
+}
+
+.VS {
+  margin: 0 10px; /* 버튼과 'VS' 사이의 간격을 조절합니다 */
+  font-weight: bold; /* 'VS' 글자를 더 강조합니다 */
+}
+.Vote-Content-Time{
+  /* border: 1px solid yellowgreen; */
+  width: 50%;
+  height: 30px;
+  margin: 0 auto; /* 가로 중앙 정렬을 추가합니다 */
+  display: flex;
+  padding-inline-start: 100px;
+
+}
+.Vote-Content-Time>span{
+  font-size: larger;
+  font-weight: 800;
+  margin-right: 40px;
+}
+.Vote-Content-Time>input{
+  border-radius: 5px;
+  width: 60%;
+}
+/* Vote 끝 */
+
+/* Shorts 시작 */
+.Board-Shorts-Content-container{
+  border: 1px solid gray;
+}
+.videoWrap {
+  /* border: 1px solid red; */
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  width: 100%;
+  align-items: center;
+}
+.videoplayer-wrapper{
+  border: 1px solid black;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  width: 300px;
+  height: 600px;
+  position: relative;
+  
+  
+}
+.videoplayer-userinfo{
+  width: 300px;
+  height: 50px;
+  color: #e8e8e8;
+  position: absolute;
+  margin: 10px 0 10px;
+  padding: 0 10px 0;
+}
+.videoplayer-userimg-wrapper{
+  width: 100%;
+  height: 50px;
+
+}
+.videoplayer-userimg{
+  width: 45px;
+  height: 45px;
+  border-radius: 10vh;
+  margin: 5px;
+  
+}
+.videoplayer-userinfo-wrapper{
+  /* background-color: #e8e8e8; */
+  position: absolute;
+  width: 50px;
+  height: 500px;
+  display: inline;
+  margin-left: 250px;
+  z-index: 1;
+}
+.videoplayer-userinfo-heart,.videoplayer-userinfo-reply{
+  /* background-color: #e8e8e8; */
+  position: absolute;
+  width: 50px;
+  margin-top: 350px;
+
+}
+.videoplayer-userinfo-reply{
+  margin-top: 400px;
+}
+/* 다른 스타일을 덮어씌우기 위해 우선순위를 높임 */
+.videoplayer-userinfo-heart .bi{
+  font-size: 30px;
+}
+.videoplayer-userinfo-reply .bi{
+  font-size: 30px;
+
+}
+.videoplayer {
+  border: 1px solid black;
+  background-color: #000000;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  width: 300px;
+  height: 600px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.videosize{
+  width: 10%;
+}
+
+.videoFileUploader{
+  border-top: 1px solid gray;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videoFileUploader>input{
+  width: 700px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+input[type=file]::file-selector-button {
+  width: 100px;
+  height: 30px;
+  background: #e8e8e8;
+  border: 1px solid rgb(77,77,77);
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+}
+input[type=file]:hover::file-selector-button {
+  background: rgb(215, 215, 215);
+  color: #000000;
+}
+
+/* Shorts 끝 */
+
+
+
+/* Editor css 시작 */
+.Editor-container{
+  width: 1000px;
+  height: 500px;
+}
+.Editor-controller-textbox{
+  width: 900px;
+  height: 400px;
+}
+.board-btn-cntrol-box{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: 0 auto;
+}
+.board-btn-wrapper{
+  margin: 0 auto;
+}
+/* button btn 요소 */
+.board-cancel-btn{
+  width: 100px;
+  height: 50px;
+  border : 3px solid #FCFA90;
+  color:#CB9DE7; 
+  background-color:white; 
+  font-weight: 900;
+  font-family: 'ImcreSoojin';
+
+}
+.board-cancel-btn:hover{
+  background-color:#FCFA90;
+  color:#CB9DE7;
+}
+.board-submit-btn{
+  width: 100px;
+  height: 50px;
+  border : 3px solid #CB9DE7;
+  border-radius: 0.5vw;
+  color:#CB9DE7; 
+  background-color:white; 
+  font-weight: 100;
+  font-family: 'ImcreSoojin';
+
+}
+.board-submit-btn:hover{
+  background-color:#CB9DE7;
+  color:#FCFA90;
+}
+/* button btn 요소 */
+/* .ck.ck-editor__editable:not(.ck-editor__nested-editable) {
+  min-height: 400px;
+  margin-bottom: 20px;
+} */
+/* Editor css 끝 */
+
+/* Vote 시작 */
+.Vote-Content-container{
+  border: 1px solid gray;
+  width: 100%;
+  height: 500px;
+  justify-content: center;
+  text-align: center;
+
+}
+.Vote-Content-btn-wrapper{
+  /* border: 1px solid red; */
+  width: 50%;
+  height: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.Vote-button-container {
+  display: flex;
+  align-items: center;
+}
+.Vote-button-controll{
+  border: 1px solid rgb(186, 186, 186);
+  width: 200px;
+  height: 200px;
+  justify-content: space-between;
+  margin: 10px;
+  /* background-color:#FCFA90;
+  color:#CB9DE7; */
+  font-family: 'HakgyoansimWoojuR';
+  font-size: larger;
+  text-align: center;
+  
+}
+
+.VS {
+  margin: 0 10px; /* 버튼과 'VS' 사이의 간격을 조절합니다 */
+  font-weight: bold; /* 'VS' 글자를 더 강조합니다 */
+}
+.Vote-Content-Time{
+  /* border: 1px solid yellowgreen; */
+  width: 50%;
+  height: 30px;
+  margin: 0 auto; /* 가로 중앙 정렬을 추가합니다 */
+  display: flex;
+  padding-inline-start: 100px;
+
+}
+.Vote-Content-Time>span{
+  font-size: larger;
+  font-weight: 800;
+  margin-right: 40px;
+}
+.Vote-Content-Time>input{
+  border-radius: 5px;
+  width: 60%;
+}
+/* Vote 끝 */
+
+/* Shorts 시작 */
+.Board-Shorts-Content-container{
+  border: 1px solid gray;
+}
+.videoWrap {
+  /* border: 1px solid red; */
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  width: 100%;
+  align-items: center;
+}
+.videoplayer-wrapper{
+  border: 1px solid black;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  width: 300px;
+  height: 600px;
+  position: relative;
+  
+  
+}
+.videoplayer-userinfo{
+  width: 300px;
+  height: 50px;
+  color: #e8e8e8;
+  position: absolute;
+  margin: 10px 0 10px;
+  padding: 0 10px 0;
+}
+.videoplayer-userimg-wrapper{
+  width: 100%;
+  height: 50px;
+
+}
+.videoplayer-userimg{
+  width: 45px;
+  height: 45px;
+  border-radius: 10vh;
+  margin: 5px;
+  
+}
+.videoplayer-userinfo-wrapper{
+  /* background-color: #e8e8e8; */
+  position: absolute;
+  width: 50px;
+  height: 500px;
+  display: inline;
+  margin-left: 250px;
+  z-index: 1;
+}
+.videoplayer-userinfo-heart,.videoplayer-userinfo-reply{
+  /* background-color: #e8e8e8; */
+  position: absolute;
+  width: 50px;
+  margin-top: 350px;
+
+}
+.videoplayer-userinfo-reply{
+  margin-top: 400px;
+}
+/* 다른 스타일을 덮어씌우기 위해 우선순위를 높임 */
+.videoplayer-userinfo-heart .bi{
+  font-size: 30px;
+}
+.videoplayer-userinfo-reply .bi{
+  font-size: 30px;
+
+}
+.videoplayer {
+  border: 1px solid black;
+  background-color: #000000;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  width: 300px;
+  height: 600px;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.videosize{
+  width: 10%;
+}
+
+.videoFileUploader{
+  border-top: 1px solid gray;
+  margin: 0 auto; /* 가로 중앙 정렬 */
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.videoFileUploader>input{
+  width: 700px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+input[type=file]::file-selector-button {
+  width: 100px;
+  height: 30px;
+  background: #e8e8e8;
+  border: 1px solid rgb(77,77,77);
+  border-radius: 5px;
+  border-style: none;
+  cursor: pointer;
+}
+input[type=file]:hover::file-selector-button {
+  background: rgb(215, 215, 215);
+  color: #000000;
+}
+
+/* Shorts 끝 */
+
+
+
+/* Editor css 시작 */
+.Editor-container{
+  width: 1000px;
+  height: 500px;
+}
+.Editor-controller-textbox{
+  width: 900px;
+  height: 400px;
+}
+.board-btn-cntrol-box{
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin: 0 auto;
+}
+.board-btn-wrapper{
+  margin: 0 auto;
+}
+/* button btn 요소 */
+.board-cancel-btn{
+  width: 100px;
+  height: 50px;
+  border : 3px solid #FCFA90;
+  color:#CB9DE7; 
+  background-color:white; 
+  font-weight: 900;
+  font-family: 'ImcreSoojin';
+
+}
+.board-cancel-btn:hover{
+  background-color:#FCFA90;
+  color:#CB9DE7;
+}
+.board-submit-btn{
+  width: 100px;
+  height: 50px;
+  border : 3px solid #CB9DE7;
+  color:#CB9DE7; 
+  background-color:white; 
+  font-weight: 900;
+  font-family: 'ImcreSoojin';
+
+}
+.board-submit-btn:hover{
+  background-color:#CB9DE7;
+  color:#FCFA90;
+}
+/* button btn 요소 */
+/* .ck.ck-editor__editable:not(.ck-editor__nested-editable) {
+  min-height: 400px;
+  margin-bottom: 20px;
+} */
+/* Editor css 끝 */
+
+
+
+
+/*boardSh css*/
+.boardSh-content{
+  //border: 1px solid red;
+  margin: 3vh 2vw 3vh 2vw;
+  text-align: center;
+}
+.boardSh-content>span{
+  font-size: 1.5vw;
+}
+.boardSh-content>textarea{
+  border-radius: 0.5vw;
+  border: 2px solid #7A7A7A;
+}
+.boardList-search-btn{
+  border: 2px solid #CB9DE7;
+  border-radius: 0.5vw;
+  background-color: white;
+  color: #CB9DE7;
+  font-size: 130%;
+  font-weight: 900;
+}
+.boardList-search-btn:hover{
+  transition-duration: 0.5s;
+  background-color: #CB9DE7;
+  color: white;
+}
+
+.BoardDetail-userVideo-views-container{
+  margin-top: 10vh;
+}
+.BoardDetail-userVideo-views-li{
+  //border: 1px solid red;
+  width: 45%;
+  margin: auto;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #000000;
+}
+.video-box{
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: auto;
+}
+.board-video {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.video-user-box{
+  width: 25%;
+  display: flex;
+  padding: 2%;
+  margin-bottom: 3%;
+  justify-content: space-around;
+}
+.video-content{
+  position: relative;
+  padding: 2%;
+  bottom: 25%;
+  color:rgb(222, 222, 222);
+  height: 23vh;
+  overflow-y: scroll;
+  background: linear-gradient(transparent, black);
+  z-index: 1;
+}
+.video-user-thumb{
+  background-color: #000000;
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.video-user-thumb>img{
+  width: 100%;
+}
+
+
+.board-video-thumb{
+  width: 100%;
+}

@@ -1,0 +1,95 @@
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.shopMyCoupon-container{
+    display: flex;
+    font-family: 'HakgyoansimWoojuR';
+    padding-top: 10vh;
+    font-weight: 900;
+    letter-spacing: 0.1vw;
+    width: 100%;
+}
+.myCoupon-info{
+    border-right: 1px solid #CB9DE7; 
+    width: 30%;
+}
+
+.myCoupon-info-head{
+    padding-top: 2vh;
+    text-align: center;
+    font-size: 1.5vw;
+}
+.myCoupon-info-middle{
+    text-align: center;
+    font-size: 2vw;
+}
+
+.myCoupon-img{
+    width: 80%;
+    border: 3px solid #CB9DE7; 
+    border-radius: 0.5vw;
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+}
+.myCoupon-img>img{
+    width: 100%;
+}
+/*오른쪽 영역-*/
+.myCoupon-code{
+    padding: 0 3vw 0 3vw;
+    margin: auto;
+    text-align: center;
+    width: 70%;
+}
+.myCoupon-code div, .myCoupon-code>span{
+    display: block;
+    height: 7vh;
+}
+.myCoupon-code>div:first-child{
+    border: 1px solid #CB9DE7;
+    border-radius: 0.5vw;
+    width: 60%;
+    height: 25vh;
+    text-align: center;
+    padding: 2%;
+    margin: auto;
+}
+.myCoupon-code>div>img{
+    width: 100%;
+    height: 100%;
+}
+.myCoupon-code>div:nth-child(1){
+    margin-top: 1vh;
+    font-size: 1.5vw;
+}
+.myCoupon-code>span{
+    font-size: 1.5vw;
+}
+.myCoupon-code>div:nth-child(3){
+    font-size: 2vw;
+}
+.coupon-alert1{
+    font-family: 'HakgyoansimWoojuR';
+    padding-top: 3vh;
+    color: #CB9DE7; 
+    font-weight: 900;
+    letter-spacing: 0.1vw;
+    width: 100%;
+    text-align: center;
+    font-size: 2.5vw;
+}
+.coupon-alert2{
+    font-family: 'HakgyoansimWoojuR';
+    padding-top: 2vh;
+    color:#CB9DE7; 
+    font-weight: 900;
+    letter-spacing: 0.1vw;
+    width: 100%;
+    text-align: center;
+    font-size: 2vw;
+}

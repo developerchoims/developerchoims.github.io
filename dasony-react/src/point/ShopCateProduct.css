@@ -1,0 +1,16 @@
+.title-for-product{
+    height: 8vh;
+    line-height: 8vh;
+    font-weight: 900;
+    text-align: center;
+    border : 3px solid #CB9DE7; 
+    color:#CB9DE7; 
+    background-color:white;
+    border-radius:0.5vw;
+    margin: 2vh 0 5vh 0 ;
+}
+
+.shopBest-box a:hover{
+    color:#CB9DE7;
+    transition-duration: 0.5s;
+}

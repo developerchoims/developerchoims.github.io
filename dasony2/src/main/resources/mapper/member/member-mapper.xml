@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="memberMapper">
+
+	<resultMap type="user" id="memberMap">
+		<id column="USER_NO" property="userNo"/>
+		<result column="USER_ID" property="userId"/>
+		<result column="USER_PWD" property="userPwd"/>
+		<result column="USER_NAME" property="userName"/>
+		<result column="USER_NICKNAME" property="userNick"/>
+		<result column="USER_ADDRESS" property="userAddress"/>
+		<result column="USER_REGION" property="userRegion"/>
+		<result column="USER_PHONE" property="userPhone"/>
+		<result column="USER_EMAIL" property="userEmail"/>
+		<result column="USER_LEVEL" property="userLevel"/>
+		<result column="USER_JOIN_DATE" property="userJoinDate"/>
+		<result column="USER_MOD_DATE" property="userModDate"/>
+		<result column="USER_STATUS" property="userStatus"/>
+		<result column="TOTAL_POINT" property="totalPoint"/>
+		<result column="GAME_STATUS" property="gameStatus"/>
+		<result column="USER_EXP" property="userExp"/>
+	</resultMap>
+	
+	<select id="selectUserList" resultMap="memberMap">
+		SELECT *
+		FROM MEMBER
+		ORDER BY USER_NO DESC
+	</select>
+	
+	<insert id="insertUser" parameterType="user">
+		INSERT INTO MEMBER
+		VALUES(TO_NUMBER(TO_CHAR(SYSDATE, 'YYMMDD') || TO_CHAR(LPAD(member_seq.nextval, 2, '0'))),
+	    #{userId}, 
+	    #{userPwd}, 
+	    #{userName}, 
+	    #{userNick},
+	    #{userAddress},
+	    DEFAULT,
+	    #{userPhone},
+	    #{userEmail},
+	    DEFAULT,
+	    SYSDATE,
+	    SYSDATE,
+	    DEFAULT,
+	    DEFAULT,
+	    DEFAULT,
+	    DEFAULT
+
+    	)
+	</insert>
+	
+	<select id="chkValidateId" parameterType="string" resultType = "int">
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE USER_ID = #{userId}
+	</select>
+	
+	<select id="chkValidateNick" parameterType="string" resultType = "int">
+		SELECT COUNT(*)
+		FROM MEMBER
+		WHERE USER_NICKNAME = #{userNick}
+	</select>
+	
+	<select id="login" parameterType="hashmap" resultMap="memberMap">
+		SELECT *
+		FROM MEMBER
+		WHERE USER_ID = #{userId} AND USER_PWD = #{userPwd}
+	</select>
+	
+	<select id="userForLocation" parameterType="string" resultMap="memberMap">
+		SELECT *
+		FROM MEMBER
+		WHERE USER_ID = #{user_id}
+	</select>
+	
+	<update id="location" parameterType="map">
+		UPDATE MEMBER
+		SET USER_REGION = #{location}
+		WHERE USER_NO = #{userNo}
+	</update>
+	
+
+	<select id="gameStartYN" parameterType="int" resultType="string">
+		SELECT GAME_STATUS
+		FROM MEMBER
+		WHERE USER_NO = #{userNo}
+	</select>
+
+	<select id="findingId" parameterType="string" resultMap="memberMap">
+		SELECT *
+		FROM MEMBER
+		WHERE USER_EMAIL = #{subEmail}
+	</select>
+	
+	<select id="userInfo" parameterType="long" resultMap="memberMap">
+		SELECT *
+		FROM MEMBER
+		WHERE USER_NO = #{userNo}
+	</select>
+	
+
+	<update id="updateUserPoint" parameterType="map">
+		UPDATE MEMBER
+			SET TOTAL_POINT = #{newDasonPoint}
+		WHERE USER_NO = #{userNo}
+	</update>
+  
+	<update id="userUpdate" parameterType="user">
+		UPDATE MEMBER
+		SET
+			USER_NAME=#{userName},
+			USER_PHONE = #{userPhone},
+			USER_EMAIL = #{userEmail},
+			USER_ADDRESS = #{userAddress},
+			USER_STATUS = #{userStatus},
+			USER_LEVEL = #{userLevel},
+			USER_MOD_DATE = SYSDATE
+		WHERE USER_NO = #{userNo}
+	</update>
+	
+	<select id="getMyInfo" parameterType="int" resultMap="memberMap">
+		
+		SELECT * FROM MEMBER
+		WHERE USER_NO = #{userNo}
+		
+	</select>
+
+	<update id="modifyMyInfo" parameterType="user">
+		UPDATE MEMBER
+		SET
+			USER_ID = #{userId},
+			USER_NAME = #{userName},
+			USER_NICKNAME = #{userNick},
+			USER_PWD = #{userPwd},
+			USER_PHONE = #{userPhone},
+			USER_EMAIL = #{userEmail},
+			USER_ADDRESS = #{userAddress},
+			USER_MOD_DATE = SYSDATE
+		WHERE USER_NO = #{userNo}
+	</update>
+	
+	<update id="changeNewPwd" parameterType="user">
+		UPDATE MEMBER
+		SET
+		USER_PWD = #{newPwd}
+		WHERE USER_NO = #{userNo}		
+	</update>
+	
+	<select id="getMyPoint" parameterType="int" resultMap="memberMap">
+		SELECT TOTAL_POINT
+		FROM MEMBER
+		WHERE USER_NO = #{userNo}
+	</select>
+	
+	<select id="getMyTicket" parameterType="int" resultType="int">
+		SELECT COUNT(*)
+		FROM TICKET
+		WHERE USER_NO=#{userNo} AND TICKET_STATUS = 'Y'
+	</select>
+	
+	<update id="modifyNewPwd" parameterType="user">
+		UPDATE MEMBER
+		SET USER_PWD = #{newPwd}
+		WHERE USER_NAME = #{userName} AND USER_EMAIL = #{userEmail}
+	</update>
+	
+	<update id="donaInsertExp" parameterType="donationList">
+		UPDATE MEMBER
+    		SET USER_EXP = USER_EXP + 15 + #{donaAmount} / 200
+   	 	WHERE USER_NO = #{userNo}
+	</update>
+	
+	<update id="insertBoardExp" parameterType="boardWriterForm">
+		UPDATE MEMBER
+    		SET USER_EXP = USER_EXP + 40
+   	 	WHERE USER_NO = #{userNo}
+	</update>
+	
+	<update id="insertReplyExp" parameterType="int">
+		UPDATE MEMBER
+    		SET USER_EXP = USER_EXP + 25
+   	 	WHERE USER_NO = #{userNo}
+	</update>
+	
+	
+</mapper>

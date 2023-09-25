@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.calendar-container{
+    width: 100%;
+}
+.react-calendar { 
+    width: 100%;
+    background-color: #fff;
+    color: #7A7A7A;
+    border-radius: 0.5vw;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+    font-size: 1vw;
+    font-family: 'HakgyoansimWoojuR';
+    margin-top: 1vw;
+    border: 1px solid #7A7A7A;
+    height: 50vh;
+   }
+   .react-calendar__navigation button {
+    color: #CB9DE7;
+    min-width: 44px;
+    background: none;
+    font-size: 16px;
+    margin-top: 8px;
+   }
+   .react-calendar__navigation button:enabled:hover,
+   .react-calendar__navigation button:enabled:focus {
+    background-color: #f8f8fa;
+   }
+   .react-calendar__navigation button[disabled] {
+    background-color: #f0f0f0;
+   }
+   abbr[title] {
+    text-decoration: none;
+   }
+   /* .react-calendar__month-view__days__day--weekend {
+    color: #d10000;
+   } */
+   .react-calendar__tile{
+    height: 7vh;
+    color: #7A7A7A;
+   }
+   .react-calendar__tile:enabled:hover,
+   .react-calendar__tile:enabled:focus {
+    background: #f8f8fa;
+    color: #CB9DE7;
+    border-radius: 6px;
+   }
+   .react-calendar__tile--now {
+    background: #6f48eb33;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #CB9DE7;
+   }
+   .react-calendar__tile--now:enabled:hover,
+   .react-calendar__tile--now:enabled:focus {
+    background: #6f48eb33;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #CB9DE7;
+   }
+   .react-calendar__tile--hasActive:enabled:hover,
+   .react-calendar__tile--hasActive:enabled:focus {
+    background: #f8f8fa;
+   }
+   .react-calendar__tile--active {
+    background: #CB9DE7;
+    border-radius: 6px;
+    font-weight: bold;
+    color: white;
+   }
+   .react-calendar__tile--active:enabled:hover,
+   .react-calendar__tile--active:enabled:focus {
+    background: #CB9DE7;
+    color: white;
+   }
+   .react-calendar--selectRange .react-calendar__tile--hover {
+    background-color: #f8f8fa;
+   }
+   .react-calendar__tile--range {
+    background: #f8f8fa;
+    color: #CB9DE7;
+    border-radius: 0;
+   }
+   .react-calendar__tile--rangeStart {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 6px;
+    border-bottom-left-radius: 6px;
+    background: #CB9DE7;
+    color: white;
+   }
+   .react-calendar__tile--rangeEnd {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background: #CB9DE7;
+    color: white;
+   }
+   .react-calendar__tile--active,.react-calendar__tile--rangeStart>abbr, .react-calendar__tile--rangeEnd>abbr, .react-calendar__tile--rangeBothEnds>abbr{
+    color: white;
+   }
+
+
+
+    .calendar-detail-btn{
+        background-color: white;
+        border: 3px solid #CB9DE7;
+        color: #CB9DE7;
+        font-weight: 900;
+        border-radius: 0.5vw;
+    }
+    .calendar-detail-btn:hover{
+        
+        background-color: #CB9DE7;
+        transition: 0.5s;
+        color: white;
+        border-radius: 0.5vw;
+    }
+
+   .calendar-detail-container{
+    border: 2px solid #CB9DE7;
+    border-radius: 0.5vw;
+    background-color: white;
+    position: absolute;
+    width: 50vw;
+    height: 550px;
+    top: 12vh;
+    left: 14vw;
+    padding: 2vh;
+    overflow-y: scroll;
+   }
+
+   .calendar-detail-box{
+    text-align: center;
+    font-family: 'HakgyoansimWoojuR';
+    font-weight: 900;
+    font-size: 1.5vw;
+   }
+   .calendar-detail-container>div>button{
+        box-sizing: border-box;
+        border: none;
+        color:#CB9DE7; 
+        background-color:white; 
+        font-weight: 900;
+        border-radius:0.5vw;
+        font-family: 'HakgyoansimWoojuR';
+        font-size: 2vw;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+
+    .calendar-detail-box{
+        text-align: center;
+        color: #7A7A7A;
+    }
+    .calendar-detail-box>div{
+        margin: auto;
+    }
+    .calendar-detail-box table{
+        width: 100%;
+        margin: 1vh 0 0 0;
+        font-size: 1.2vw;
+        table-layout: fixed;
+    }
+    .calendar-detail-box table tr{
+        border-top: 1px solid #7A7A7A;
+        border-bottom: 1px solid #7A7A7A;
+        color: #7A7A7A;
+    }
+    .calendar-detail-box table th{
+        
+        background-color: #efefef;
+    }
+    .calendar-detail-box table td{
+        word-wrap: break-word;
+        padding: 0.5vw;
+    }
+    .calendar-detail-box table th:first-child{
+        width: 25%;
+    }
+    .calendar-detail-box table th:nth-child(2){
+        width: 25%;
+    }
+    .calendar-detail-box table th:nth-child(3){
+        width: 20%;
+    }
+    .calendar-detail-box table th:nth-child(4){
+        width: 20%;
+    }
+    .calendar-detail-box table th:nth-child(5){
+        width: 10%;
+    }
+    .calendar-detail-box table td{
+        padding: 0.5vw;
+    }
+    .calendar-detail-box table td:first-child{
+        width: 25%;
+        font-size: 80%;
+    }
+    .calendar-detail-box table td:nth-child(2){
+        width: 25%;
+    }
+    .calendar-detail-box table td:nth-child(3){
+        width: 20%;
+        font-size: 80%;
+    }
+    .calendar-detail-box table td:nth-child(4){
+        width: 20%;
+        font-size: 1vw;
+    }
+    .calendar-detail-box table td:nth-child(5){
+        width: 10%;
+    }
+
+
+    .calendar-detail-box>div>div>button{
+        box-sizing: border-box;
+        border: 2px solid #CB9DE7;
+        color:#CB9DE7; 
+        background-color:white; 
+        font-weight: 900;
+        border-radius:0.5vw;
+        font-family: 'HakgyoansimWoojuR';
+        font-size: 1.3vw;
+        width: 15%;
+        height: 6vh;
+        position: relative;
+        top: 5vh;
+    }
+    .calendar-detail-box>div>div>button:hover{
+        background-color: #CB9DE7;
+        color: #FCFA90;
+        transition: 0.5s;
+    }
+
+
+    .modalTable{
+        width: 100%;
+        text-align: center;
+        color: #7A7A7A;
+    }
+    .modalTable tr{
+        height: 10vh;
+    }
+    .modalTable th{
+        width: 30%;
+    }
+    .modalTable td{
+        width: 70%;
+    }
+    .modalTable input[type='text']{
+        width: 90%;
+    }
+    .modalTable input[type='date']{
+        width: 40%;
+    }
+    .modalTable select{
+        width: 90%;
+        text-align: center;
+        height: 5vh;
+    }
+
+
+    .main-chat-icon-container{
+        position: fixed;
+        top: 90%;
+        right: 11%;
+    }
+
+    #event-date-start{
+        font-size: 1.2vw;
+    }
+    #event-date-end{
+        font-size: 1.2vw;
+    }

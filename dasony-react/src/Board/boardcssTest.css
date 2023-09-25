@@ -1,0 +1,124 @@
+.BoardWriteForm-wrapper{
+  width: 1300px;
+  height: 100%;
+}
+.BoardWriteForm-head-title-wrapper{
+  /* border: 1px solid gray; */
+  width: 1300px;
+  height: 100%;
+}
+.boardList-search-title-wrapper{
+  border-bottom: 1px solid gray;
+  width: 100%;
+  height: 150px;
+  padding: 10px 0 10px;
+  margin: 1px;
+  }
+.boardDetail-head-title{
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid gray;
+
+}
+.BoardWriteForm-search-box-title{
+  border: 1px solid #CB9DE7;
+  width: 90%;
+  height: 50px;
+  border-radius: 4px;
+  padding: 5px 5px 5px;
+  margin: 5px 10px 5px 50px;
+  font-family: 'HakgyoansimWoojuR';
+  padding-inline-start: 52px;
+  text-align: start;
+}
+.BoardWriteForm-search-input-title{
+  border: none;
+  outline: none;
+  margin-top: 6px;
+  display: flex;
+  width: 80%;
+
+}
+.BoardWriteForm-head-title-text{
+  font-family: 'HakgyoansimWoojuR';
+  font-size: x-large;
+  font-weight: 800;
+  margin-left: 20px;
+
+}
+.BoardWriteForm-search-box-tag {
+  border: 1px solid #CB9DE7;
+  position: relative;
+  width: 90%;
+  height: 50px;
+  border-radius: 4px;
+  padding: 5px 5px 5px;
+  margin: 5px 10px 5px 50px;
+  font-family: 'HakgyoansimWoojuR';
+  padding-inline-start: 52px;
+  text-align: start;
+  display: flex;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: inherit;
+}
+.BoardWriteForm-search-input-tag {
+  border: none;
+  outline: none;
+  flex: 1;
+  display: flex;
+
+}
+.BoardWriteForm-search-input-tag-wrapper{
+  position: relative;
+}
+.board-input-contentarea{
+  border: 1px solid #CB9DE7;
+  border-radius: 1%;
+  width: 100%;
+  height: 600px;
+  /* resize: none; */
+  overflow-y:scroll;
+}
+
+.board-input-contentarea:focus {
+  outline: none;
+}
+.board-input-contentarea::-webkit-scrollbar {
+  width: 10px;
+}
+.board-input-contentarea::-webkit-scrollbar-thumb {
+  background-color: #2f3542;
+}
+.board-input-contentarea::-webkit-scrollbar-track {
+  background-color: grey;
+}
+
+.BoardWriteForm-img-input-wrapper{
+  /* border: 1px solid gray; */
+  width: 100%;
+  height: 4vh;
+}
+.boardWriter-img-select{
+  font-size: 1.7vh;
+  font-family: 'HakgyoansimWoojuR';
+  font-weight: 700;
+  margin: 0.5vh 1vw 0.5vh;
+}
+.boardWriter-img-show-wrapper{
+  /* border: 1px solid lightgray; */
+  background-color: #fbf5ff;
+  width: 100%;
+  height: 26vh;
+  display: flex;
+  margin-bottom: 1vh;
+  border-radius: 15px;
+
+}
+.boardWriter-img-show-box{
+  margin: 1vh 1vw  1vh 6vw;
+}
+.boardWriter-img-show-iomdclos{
+  text-align: center;
+}

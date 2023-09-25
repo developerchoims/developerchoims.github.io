@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="shareMapper">
+
+	<resultMap id="boardMap" type="board">
+		<id column="BOARD_NO" property="boardNo"/>
+		<result column="USER_NO" property="userNo"/>
+		<result column="BOARD_TITLE" property="boardTitle"/>
+		<result column="BOARD_WRITE_DATE" property="boardWriteDate"/>
+		<result column="BOARD_VIEWS" property="boardViews"/>
+		<result column="BOARD_CONTENT" property="boardContent"/>
+		<result column="BOARD_STATUS" property="boardStatus"/>	
+		<result column="BOARD_CATE_NO" property="boardCateNo"/>
+	</resultMap>
+	
+	<resultMap id="boardCateMap" type="boardCate">
+		<id column="BOARD_CATE_NO" property="boardCateNo"/>
+		<result column="BOARD_BIG_CATE" property="boardBigCate"/>
+		<result column="BOARD_MIDDLE_CATE" property="boardMiddleCate"/>
+		<result column="BOARD_SMALL_CATE" property="boardSmallCate"/>
+	</resultMap>
+	
+	<resultMap id="boardImgMap" type="boardImg">
+		<id column="BOARD_IMG_NO" property="boardImgNo"/>
+		<result column="BOARD_IMG_MOD_NAME" property="boardImgModName"/>
+		<result column="BOARD_IMG_ORI_NAME" property="boardImgOriName"/>
+		<result column="BOARD_IMG_PATH" property="boardImgPath"/>
+		<result column="BOARD_IMG_UPLOAD_DATE" property="boardImgUploadDate"/>
+		<result column="BOARD_IMG_LEVEL" property="boardImgLevel"/>
+		<result column="BOARD_IMG_STATUS" property="boardImgStatus"/>
+		<result column="BOARD_NO" property="boardNoRef"/>
+		<result column="USER_NO" property="userNoRef"/>
+	</resultMap>
+	
+	<resultMap type="user" id="userMap">
+		<id column="USER_NO" property="userNo"/>
+		<result column="USER_ID" property="userId"/>
+		<result column="USER_PWD" property="userPwd"/>
+		<result column="USER_NAME" property="userName"/>
+		<result column="USER_NICKNAME" property="userNick"/>
+		<result column="USER_ADDRESS" property="userAddress"/>
+		<result column="USER_REGION" property="userRegion"/>
+		<result column="USER_PHONE" property="userPhone"/>
+		<result column="USER_EMAIL" property="userEmail"/>
+		<result column="USER_LEVEL" property="userLevel"/>
+		<result column="USER_JOIN_DATE" property="userJoinDate"/>
+		<result column="USER_MOD_DATE" property="userModDate"/>
+		<result column="USER_STATUS" property="userStatus"/>
+	</resultMap>
+	
+	<resultMap id="boardCareMap" type="boardCare">
+		<id column="BOARD_NO" property="bCareBoardNo"/>
+		<result column="USER_NO" property="bCareUserNo"/>
+	</resultMap>
+	
+	<resultMap type="boardTag" id="boardTagMap">
+		<id column="BOARD_NO" property="boardTagBNo"/>
+	  	<result column="BOARD_TAG" property="boardTag"/>
+	</resultMap>
+	
+	<resultMap id="shareList" type="share">
+		<id column = "BOARD_NO" property="boardNo"/>
+		<result column="REPLY_COUNT" property="replyCount"/>
+		<result column="USER_VIEW_COUNT" property="userViewCount"/>
+		<association property="user" resultMap="userMap"/>
+		<association property="board" resultMap="boardMap"/>
+		<association property="boardCate" resultMap="boardCateMap"/>
+		<association property="boardCare" resultMap="boardCareMap"/>
+		<association property="boardTag" resultMap="boardTagMap"/>
+	</resultMap>
+	
+	
+	
+	<select id="shareList" parameterType="map" resultMap="shareList">
+		SELECT B.BOARD_NO, B.BOARD_TITLE, B.BOARD_CONTENT, B.BOARD_WRITE_DATE, M.USER_NO, M.USER_NICKNAME,C.*,T.*,
+		(SELECT COUNT(*) FROM REPLY P WHERE B.BOARD_NO = P.BOARD_NO AND P.REPLY_STATUS = 'Y') AS REPLY_COUNT,
+		(SELECT COUNT(*) FROM BOARD_CARE R WHERE B.BOARD_NO = R.BOARD_NO) AS USER_VIEW_COUNT
+		FROM BOARD B
+		LEFT JOIN MEMBER M ON B.USER_NO = M.USER_NO
+		LEFT JOIN BOARD_CATE C ON B.BOARD_CATE_NO = C.BOARD_CATE_NO
+		LEFT JOIN BOARD_CARE R ON B.BOARD_NO = R.BOARD_NO
+		LEFT JOIN BOARD_KEYWORD T ON B.BOARD_NO = T.BOARD_NO
+		WHERE M.USER_REGION = #{userRegion}
+		AND B.BOARD_CATE_NO = #{boardCateNo}
+		AND B.BOARD_STATUS = 'Y'
+		ORDER BY B.BOARD_NO DESC
+	</select>
+	
+	<insert id="shareAdd" parameterType="board">
+		INSERT ALL
+		INTO BOARD
+		VALUES(
+			SEQ_BNO.nextval,
+			#{userNo},
+			#{boardTitle},
+			#{boardWriteDate},
+			DEFAULT, 
+			#{boardContent},
+			'Y', 
+			#{boardCateNo}
+		)
+		INTO BOARD_KEYWORD
+		VALUES (
+		    #{boardKeyword},
+		    SEQ_BNO.currval
+		)
+		SELECT * FROM DUAL
+	</insert> 
+	
+	<update id="addShareImg" parameterType="java.util.List">
+    <foreach collection="list" item="item" index="index" separator=" " open="INSERT ALL" close="SELECT * FROM DUAL">
+        INTO BOARD_IMG
+        (
+            BOARD_IMG_NO,
+            BOARD_IMG_MOD_NAME,
+            BOARD_IMG_ORI_NAME,
+            BOARD_IMG_PATH,
+            BOARD_IMG_UPLOAD_DATE,
+            BOARD_IMG_LEVEL,
+            BOARD_IMG_STATUS,
+            BOARD_NO,
+            USER_NO
+        )
+	        VALUES
+	        (
+	            #{item.boardNo}||SEQ_BINO.nextval||#{index},
+	            #{item.boardImgModName},
+	            #{item.boardImgOriName},
+	            #{item.boardImgPath},
+	            #{item.boardImgUploadDate},
+	            #{item.boardImgLevel},
+	            'Y',
+	            #{item.boardNo},
+	            #{item.userNo}
+	        )
+	    </foreach>
+	</update>
+</mapper>

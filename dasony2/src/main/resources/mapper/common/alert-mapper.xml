@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="alert">
+
+	
+	<resultMap id="alertResultSet" type="Alert">
+		<id column="ALERT_NO" property="alertNo"/>
+		<result column="USER_NO" property="userNo"/>
+		<result column="ALERT_CONTENT" property="alertContent"/>
+		<result column="ALERT_DATE" property="alertDate"/>
+		<result column="ALERT_CATE" property="alertCate"/>
+		<result column="ALERT_STATUS" property="alertStatus"/>
+		<result column="ALERT_TITLE" property="alertTitle"/>
+	</resultMap>
+	
+	
+	
+	
+	<select id="getAlertList" resultMap="alertResultSet">
+	
+		SELECT * 
+		FROM ALERT
+		WHERE USER_NO = #{userNo}
+	
+	</select>	
+	
+
+	<insert id="insertShopAlert" parameterType="point">
+		INSERT INTO ALERT VALUES(
+		SEQ_ANO.NEXTVAL,
+		#{userNo},
+		#{pointAmount}||' 다손으로 '||#{pointContent}||'(을/를) 구매',
+		TO_CHAR(SYSDATE, 'MM-DD HH24:MI'),
+		'P',
+		'B',
+		'상점 쿠폰 구매 알림',
+		''
+		)
+	</insert>
+	
+	
+	
+	<insert id="insertReplyAlert" parameterType="reply">
+		INSERT INTO ALERT
+		VALUES (
+			SEQ_ANO.NEXTVAL,
+			(SELECT USER_NO FROM BOARD WHERE BOARD_NO = #{rBoardNo}),
+			(SELECT BOARD_TITLE FROM BOARD WHERE BOARD_NO = #{rBoardNo})||'에 새로운 댓글이 달렸습니다.',
+			TO_CHAR(SYSDATE, 'MM-DD HH24:MI'),
+			'R',
+			DEFAULT,
+			'댓글 알림',
+			''
+		)
+	</insert>
+
+	 
+	
+	
+	
+	
+</mapper>

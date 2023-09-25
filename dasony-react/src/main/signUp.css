@@ -1,0 +1,106 @@
+
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ImcreSoojin';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.3/ImcreSoojin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.sign-up-container{
+    padding: 0;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    color: #7A7A7A;
+}
+
+
+
+
+.sign-up-container table{
+    padding-top: 10px;
+    text-align: center;
+    width: 55%;
+    margin: auto;
+    font-size: 1.5vw;
+    font-family: 'HakgyoansimWoojuR';
+}
+.sign-up-container table tbody{
+    text-align: center;
+}
+
+.sign-up-container table tbody>tr>th:first-child{
+    width: 15%;
+}
+.sign-up-container table tbody>tr>td:first-child{
+    width: 60%;
+}
+.sign-up-container table tbody>tr>th:last-child{
+    width: 25%;
+}
+
+.sign-up-container tr{
+    height: 8vh;
+}
+
+.sign-up-container thead th{
+    text-align: left;
+    font-size: 2vw;
+    padding-top: 1.5vh;
+}
+
+.sign-up-container th{
+    text-align: right;
+    width: 20%;
+}
+
+.sign-up-container input{
+    width: 80%;
+    border: 2px solid #CB9DE7;
+    border-radius: 0.5vw;
+}
+
+.sign-up-container button{
+    width: 70%;
+    height: 5.5vh;
+    border-radius: 0.5vw;
+    font-size: 1vw;
+    letter-spacing: 0.1vw;
+    border : 3px solid #CB9DE7; 
+    color:#CB9DE7; 
+    background-color:white; 
+    font-weight: 900;
+}
+
+.sign-up-container tfoot button{
+    width:50%;
+    height: 8vh;
+    font-size: 1.5vw;
+    border : 3px solid #CB9DE7; 
+    color:#CB9DE7; 
+    background-color:white; 
+    font-weight: 900;
+}
+
+.sign-up-container button:hover{
+    background-color:#CB9DE7;
+    color:#FCFA90;
+    transition-duration: 0.5s;
+}
+
+.sign-up-container table select{
+    width: 70%;
+    height: 5.5vh;
+    font-size: 1vw;
+    border : 3px solid #CB9DE7; 
+    color:#CB9DE7; 
+    background-color:white; 
+    font-weight: 900;
+    border-radius: 0.5vw;
+}

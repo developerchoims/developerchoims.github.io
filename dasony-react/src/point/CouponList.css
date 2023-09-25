@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'HakgyoansimWoojuR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimWoojuR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+.coupon-title{
+    font-family: 'HakgyoansimWoojuR';
+    font-weight: 900;
+    font-size: 2vw;
+    letter-spacing: 0.2vw;
+    padding: 5vh 0 2vh 0;
+    color: #7A7A7A;
+}
+
+.coupon-item{
+    display: flex;
+    height: 20vh;
+    border-top: 1px solid #7A7A7A;
+    justify-content: space-around;
+    font-family: 'HakgyoansimWoojuR';
+    font-weight: 900;
+    font-size: 1.5vw;
+    letter-spacing: 0.2vw;
+    text-align: center;
+}
+.coupon-item:hover{
+    color:#7A7A7A;
+}
+.coupon-img, .coupon-info, .coupon-date, .coupon-use{
+    margin: auto;
+}
+.coupon-img{
+    border: 1.5px solid #CB9DE7; 
+    border-radius: 0.5vw;
+    height: 90%;
+    overflow: hidden;
+    position: relative;
+}
+
+.coupon-img>img{
+    width: 100%;
+}
+.coupon-container a{
+    display: block;
+    width: 100%;
+}
+
+.coupon-list:hover{
+    background-color: #f2f2f2;
+    transition-duration: 0.5s;
+}
+
+.coupon-item>div:first-child{
+    width: 15%;
+}
+.coupon-item>div:nth-child(2){
+    width: 30%;
+}
+.coupon-item>div:nth-child(3){
+    width: 20%;
+}
+.coupon-item>div:nth-child(4){
+    width: 15%;
+}

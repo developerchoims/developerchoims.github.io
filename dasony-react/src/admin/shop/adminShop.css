@@ -1,0 +1,99 @@
+.admin-shop-container{
+    color: #7A7A7A;
+    width: 100%;
+}
+
+.admin-shop-head{
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+    font-size: 2vw;
+    font-weight: 900;
+}
+.admin-shop-head button, .admin-shop-head input{
+    font-size: 1.2vw;
+    height: 50%;
+}
+
+
+.admin-shop-table{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.admin-shop-table>table{
+    width: 100%;
+    text-align: center;
+}
+.admin-shop-table>table>thead{
+    border-bottom: 1px solid #7A7A7A;
+    height: 7vh;
+}
+.admin-shop-table>table>tbody>tr{
+    height: 12vh;
+    border-bottom: 1px solid #7A7A7A;
+}
+.admin-shop-table>table>tbody>tr:hover{
+    cursor: pointer;
+    background-color: #e7e7e7;
+    transition-duration: 0.5s;
+}
+
+.admin-shop-table button{
+    display: block;
+    font-size: 85%;
+    width: 30%;
+    margin: auto;
+    margin-bottom: 2%;
+}
+.admin-shop-table>table td{
+    padding: 0;
+}
+.admin-shop-table>table>thead>tr>th:first-child{
+    width: 10%;
+}
+.admin-shop-table>table>thead>tr>th:nth-child(2){
+    width: 20%;
+}
+.admin-shop-table>table>thead>tr>th:nth-child(3){
+    width: 18%;
+}
+.admin-shop-table>table>thead>tr>th:nth-child(4){
+    width: 30%;
+}
+.admin-shop-table>table>thead>tr>th:nth-child(5){
+    width: 12%;
+}
+.admin-shop-table>table>thead>tr>th:nth-child(6){
+    width: 10%;
+}
+
+
+
+
+.adminShop-pagination{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 5vh 0 10vh 0;
+}
+.adminShop-pagination>*:first-child{
+    width: 100%;
+    justify-content: center;
+    padding-right: 5%;
+}
+
+.adminShop-pagination>div{
+    width: 10%;
+    justify-content: center;
+}
+
+.adminShop-pagination .pagination-bar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.adminShop-pagination .pagination-bar>div{
+    padding-left: 20%;
+}

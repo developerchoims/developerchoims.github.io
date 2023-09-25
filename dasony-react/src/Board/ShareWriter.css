@@ -1,0 +1,15 @@
+.share-img-box{
+    border: 3px solid #CB9DE7;
+    border-radius: 0.5vw;
+    overflow-x: scroll;
+    white-space: nowrap; /* 콘텐츠가 한 줄로 유지되도록 설정 */
+    height: 200px;
+    display: flex;
+    width: 95%;
+    justify-content: space-around;
+    margin: auto;
+}
+.share-img-box>img{
+    height: fit-content;
+    margin: auto;
+}

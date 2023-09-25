@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="chart">
+
+	<select id="selectTotalUserCount" parameterType="string" resultType="int">
+		select count(*) 
+		from member
+		where to_char(user_join_date, 'YYYY-MM-DD') &lt;= #{date} and user_status = 'Y'
+	</select>
+	
+	<select id="selectTotalVisitCount" parameterType="string" resultType="int">
+		select count(*) from visitor where visitor_time = #{date}
+	</select>
+
+	<select id="selectValueUserCount" parameterType="hashmap" resultType="int">
+		select count(*) 
+		from member
+		where 
+		<choose>
+			<when test='kind == "in"'>
+				to_char(user_join_date, 'YYYY-MM-DD') = #{date}			
+			</when>
+			<otherwise>
+				to_char(user_mod_date, 'YYYY-MM-DD') = #{date} and user_status = 'N'
+			</otherwise>
+		</choose>
+	</select>
+	
+	<select id="selectValueBoardCount" parameterType="string" resultType="int">
+		select count(*) from board
+		where instr(board_write_date, #{date}) > 0
+	</select>
+	
+	<!-- <select id="selectValueVoteCount" parameterType="string" resultType="int">
+		select count(*) from board_vs
+		where절 수정 필요
+		where instr(board_write_date, #{date}) > 0
+	</select> -->
+	
+	<select id="selectValueDonationCount" parameterType="string" resultType="int">
+		select count(*) from donation
+		where to_char(dona_write_date, 'YYYY-MM-DD') = #{date}
+	</select>
+</mapper>

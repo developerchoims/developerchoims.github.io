@@ -1,0 +1,42 @@
+.admin-calendar-table>table{
+    width: 100%;
+    text-align: center;
+}
+.admin-calendar-table>table th:first-child{
+    width: 5%;
+}
+.admin-calendar-table>table th:nth-child(2){
+    width: 15%;
+}
+.admin-calendar-table>table th:nth-child(3){
+    width: 10%;
+}
+.admin-calendar-table>table th:nth-child(4){
+    width: 20%;
+}
+.admin-calendar-table>table th:nth-child(5){
+    width: 15%;
+}
+.admin-calendar-table>table th:nth-child(6){
+    width: 15%;
+}
+.admin-calendar-table>table th:nth-child(7){
+    width: 10%;
+}
+.admin-calendar-table>table th:nth-child(8){
+    width: 5%;
+}
+.admin-calendar-table>table th:nth-child(9){
+    width: 5%;
+}
+
+.admin-calendar-table>table tr{
+    border-bottom: 1px solid #7A7A7A;
+    height: 10vh;
+}
+.admin-calendar-table>table>tbody>tr:hover{
+    cursor: pointer;
+    background-color: #e7e7e7;
+    transition-duration: 0.5s;
+
+}
